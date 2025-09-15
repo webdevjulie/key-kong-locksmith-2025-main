@@ -1,0 +1,367 @@
+/* Enhanced Transitions for Key-Kong Locksmith Website */
+
+/* Global transition defaults */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+body {
+          font-family: "Poppins", sans-serif;
+        }
+/* Navigation transitions */
+nav {
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FFAF1E, #FFC000);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown menu transitions */
+.group .absolute {
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.group:hover .absolute {
+  transform: translateY(0);
+}
+
+/* Mobile menu transitions */
+#mobileMenu {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+}
+
+#mobileMenu:not(.hidden) {
+  transform: translateY(0);
+}
+
+/* Button hover effects */
+.bg-\[#FFC000\]:hover,
+.bg-\[#FFAF1E\]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 175, 30, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hero section animations */
+.hero-content h1 {
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-content p {
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-content .grid {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-content .flex {
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service cards hover effects */
+.bg-white\/10 {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-white\/10::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 175, 30, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.bg-white\/10:hover::before {
+  left: 100%;
+}
+
+.bg-white\/10:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #FFAF1E;
+}
+
+/* Service section card transitions */
+.bg-transparent {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bg-transparent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 170, 51, 0.2);
+}
+
+.bg-transparent img {
+  transition: transform 0.3s ease;
+}
+
+.bg-transparent:hover img {
+  transform: scale(1.05);
+}
+
+/* Call button pulse animation */
+.bg-yellow-600 {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-yellow-600::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.bg-yellow-600:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Map container transitions */
+iframe {
+  transition: all 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Footer transitions */
+footer a {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+footer a:hover {
+  transform: translateX(5px);
+}
+
+/* Scroll-triggered animations */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Stats counter animation */
+.stats-counter {
+  animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Loading animation for images */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+/* Interactive elements feedback */
+button, a {
+  transition: all 0.2s ease;
+}
+
+button:active, a:active {
+  transform: scale(0.98);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states */
+*:focus {
+  outline: 2px solid #FFAF1E;
+  outline-offset: 2px;
+  transition: outline 0.2s ease;
+}
+
+/* Text selection styling */
+::selection {
+  background: #FFAF1E;
+  color: #000;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 175, 30, 0.4),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Stagger animation for lists */
+.stagger-item {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Parallax effect for hero background */
+.parallax-bg {
+  transition: transform 0.1s ease-out;
+}
+
+/* Micro-interactions */
+.material-icons {
+  transition: transform 0.2s ease;
+}
+
+.material-icons:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Responsive transition adjustments */
+@media (max-width: 768px) {
+  .bg-white\/10:hover {
+    transform: none;
+  }
+  
+  .bg-transparent:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Dark mode transition support */
+@media (prefers-color-scheme: dark) {
+  * {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-white\/10 {
+    border-width: 2px;
+  }
+  
+  button, a {
+    outline: 1px solid;
+  }
+}

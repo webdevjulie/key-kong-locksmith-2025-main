@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap | Key-Kong Locksmith </title>
+    <link rel="icon" href="../images/key.webp" type="image/webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        body {
+          font-family: "Poppins", sans-serif;
+        }
+        .gradient-bg {
+          background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #FFAA33 100%);
+        }
+        .service-card {
+          transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
+        }
+        .service-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(255, 170, 51, 0.2);
+        }
+        .pulse-animation {
+          animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.7; }
+        }
+        .floating-card {
+          animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        .sitemap-card {
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+          border: 1px solid rgba(255, 170, 51, 0.2);
+        }
+        .sitemap-card:hover {
+          transform: translateY(-12px) scale(1.02);
+          box-shadow: 0 25px 50px rgba(255, 170, 51, 0.3);
+          border-color: #FFAA33;
+        }
+        .sitemap-section {
+          background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+          position: relative;
+          overflow: hidden;
+        }
+        .sitemap-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(circle at 20% 20%, rgba(255, 170, 51, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 80%, rgba(255, 170, 51, 0.08) 0%, transparent 50%);
+          pointer-events: none;
+        }
+        .category-icon {
+          background: linear-gradient(135deg, #FFAA33, #FFD700);
+          transition: all 0.3s ease;
+        }
+        .sitemap-card:hover .category-icon {
+          transform: rotate(360deg) scale(1.1);
+        }
+        .link-item {
+          transition: all 0.2s ease;
+          border-radius: 8px;
+          padding: 8px 12px;
+          margin: 2px 0;
+        }
+        .link-item:hover {
+          background: linear-gradient(135deg, rgba(255, 170, 51, 0.1), rgba(255, 215, 0, 0.1));
+          transform: translateX(8px);
+          color: #b45309;
+        }
+        .search-box {
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(10px);
+          border: 2px solid rgba(255, 170, 51, 0.3);
+          transition: all 0.3s ease;
+        }
+        .search-box:focus {
+          border-color: #FFAA33;
+          box-shadow: 0 0 0 4px rgba(255, 170, 51, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION WITH TOP INFO BAR -->
+<nav class="bg-white bg-opacity-90 backdrop-blur-sm border-b border-[#d4b25a] fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between py-3">
+    <!-- Logo -->
+    <div class="flex items-center space-x-4">
+      <img src="/key-kong-locksmith-2025-main/images/logo.webp" alt="Key-Kong Logo" class="h-10 w-auto"/>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden lg:flex items-center space-x-6 text-sm font-normal text-[#111111]">
+      <!-- Our Services Dropdown -->
+      <li class="relative group cursor-pointer">
+        <a href="/key-kong-locksmith-2025-main/nav/services.html" class="flex items-center gap-1 font-semibold text-[#111111] hover:text-[#FFAA33] transition duration-300">
+          Our Services
+          <span class="material-icons text-xs">expand_more</span>
+        </a>
+        <!-- Dropdown -->
+        <div class="absolute left-0 top-full mt-2 w-[700px] bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-6 grid grid-cols-4 gap-6 rounded-lg z-50">
+          <!-- Emergency Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">warning</span>
+              Emergency Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/car-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Lockout</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/house-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">House Lockout</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/business-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Business Lockout</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/storage-unit-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Storage Unit Lockout</a></li>
+            </ul>
+          </div>
+          <!-- Residential Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">home</span>
+              Residential Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-replacement.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Lock Replacement</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-rekey.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Lock Rekey</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-repair.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Lock Repair</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/gate-locks.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Gate Locks</a></li>
+            </ul>
+          </div>
+          <!-- Commercial Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">business</span>
+              Commercial Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/commercial-lock-replacements.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Commercial Lock Replacement</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/commercial-lock-rekey.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Commercial Lock Rekey</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/emergency-exit-devices.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Emergency Exit Devices</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/master-key-systems.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Master Key Systems</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/access-control.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Access Control</a></li>
+            </ul>
+          </div>
+          <!-- Automotive Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">directions_car</span>
+              Automotive Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-replacement.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Key Replacement</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/key-fob-programming.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Key Fob Programming</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-duplicate.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Key Duplicate</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-cutting.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Key Cutting</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/ignition-lock-cylinder.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Ignition Lock Cylinder</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+<!-- Service Areas Dropdown -->
+<li class="relative group cursor-pointer">
+  <a href="/key-kong-locksmith-2025-main/nav/serviceareas.html" class="flex items-center gap-1 font-semibold hover:text-[#FFAA33] transition duration-300">
+    Service Areas
+    <span class="material-icons text-xs">expand_more</span>
+  </a>
+
+  <!-- Main Dropdown -->
+  <div class="absolute left-0 top-full mt-2 w-56 bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 p-4 rounded-lg z-50">
+    <ul class="space-y-2 text-sm text-[#111111]">
+
+      <!-- CALIFORNIA -->
+      <li class="relative group/cali flex items-center justify-between gap-2 hover:border-b-2 hover:border-[#b37a1a] transition-all">
+        <div class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/california.html" class="hover:text-[#b37a1a]">California</a>
+        </div>
+        <span class="material-icons text-xs">chevron_right</span>
+
+        <!-- Submenu -->
+        <div class="absolute left-full top-0 ml-2 w-48 bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover/cali:opacity-100 group-hover/cali:visible transition-opacity duration-300 p-3 rounded-lg z-50">
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/california/locksmith-in-los-angeles.html" class="hover:text-[#b37a1a]">Los Angeles</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/california/locksmith-in-san-diego.html" class="hover:text-[#b37a1a]">San Diego</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/california/locksmith-in-san-jose.html" class="hover:text-[#b37a1a]">San Jose</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/california/locksmith-in-san-francisco.html" class="hover:text-[#b37a1a]">San Francisco</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/california/locksmith-in-sacramento.html" class="hover:text-[#b37a1a]">Sacramento</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- FLORIDA -->
+      <li class="relative group/florida flex items-center justify-between gap-2 hover:border-b-2 hover:border-[#b37a1a] transition-all">
+        <div class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/florida.html" class="hover:text-[#b37a1a]">Florida</a>
+        </div>
+        <span class="material-icons text-xs">chevron_right</span>
+
+        <div class="absolute left-full top-0 ml-2 w-48 bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover/florida:opacity-100 group-hover/florida:visible transition-opacity duration-300 p-3 rounded-lg z-50">
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-fort-lauderdale.html" class="hover:text-[#b37a1a]">Fort Lauderdale</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-jacksonville.html" class="hover:text-[#b37a1a]">Jacksonville</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-miami.html" class="hover:text-[#b37a1a]">Miami</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-orlando.html" class="hover:text-[#b37a1a]">Orlando</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-port-st-lucie.html" class="hover:text-[#b37a1a]">Port St Lucie</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-st-petersburg.html" class="hover:text-[#b37a1a]">St Petersburg</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/florida/locksmith-in-tampa.html" class="hover:text-[#b37a1a]">Tampa</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- GEORGIA -->
+      <li class="relative group/georgia flex items-center justify-between gap-2 hover:border-b-2 hover:border-[#b37a1a] transition-all">
+        <div class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/georgia.html" class="hover:text-[#b37a1a]">Georgia</a>
+        </div>
+        <span class="material-icons text-xs">chevron_right</span>
+
+        <div class="absolute left-full top-0 ml-2 w-48 bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover/georgia:opacity-100 group-hover/georgia:visible transition-opacity duration-300 p-3 rounded-lg z-50">
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/georgia/locksmith-in-atlanta.html" class="hover:text-[#b37a1a]">Atlanta</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/georgia/locksmith-in-augusta-richmond-county.html" class="hover:text-[#b37a1a]">Augusta Richmond County</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/georgia/locksmith-in-columbus.html" class="hover:text-[#b37a1a]">Columbus</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/georgia/locksmith-in-macon-bibb-county.html" class="hover:text-[#b37a1a]">Macon Bibb County</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/georgia/locksmith-in-savannah.html" class="hover:text-[#b37a1a]">Savannah</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- NEW JERSEY -->
+      <li class="relative group/nj flex items-center justify-between gap-2 hover:border-b-2 hover:border-[#b37a1a] transition-all">
+        <div class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/new-jersey.html" class="hover:text-[#b37a1a]">New Jersey</a>
+        </div>
+        <span class="material-icons text-xs">chevron_right</span>
+
+        <div class="absolute left-full top-0 ml-2 w-48 bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover/nj:opacity-100 group-hover/nj:visible transition-opacity duration-300 p-3 rounded-lg z-50">
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/new-jersey/locksmith-in-edison.html" class="hover:text-[#b37a1a]">Edison</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/new-jersey/locksmith-in-elizabeth.html" class="hover:text-[#b37a1a]">Elizabeth</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/new-jersey/locksmith-in-jersey-city.html" class="hover:text-[#b37a1a]">Jersey City</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/new-jersey/locksmith-in-newark.html" class="hover:text-[#b37a1a]">Newark</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/new-jersey/locksmith-in-north-bergen.html" class="hover:text-[#b37a1a]">North Bergen</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/new-jersey/locksmith-in-paterson.html" class="hover:text-[#b37a1a]">Paterson</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- TEXAS -->
+      <li class="relative group/texas flex items-center justify-between gap-2 hover:border-b-2 hover:border-[#b37a1a] transition-all">
+        <div class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/texas.html" class="hover:text-[#b37a1a]">Texas</a>
+        </div>
+        <span class="material-icons text-xs">chevron_right</span>
+
+        <div class="absolute left-full top-0 ml-2 w-48 bg-white border border-[#d4b25a] shadow-lg opacity-0 invisible group-hover/texas:opacity-100 group-hover/texas:visible transition-opacity duration-300 p-3 rounded-lg z-50">
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/texas/locksmith-in-austin.html" class="hover:text-[#b37a1a]">Austin</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/texas/locksmith-in-dallas.html" class="hover:text-[#b37a1a]">Dallas</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/texas/locksmith-in-fort-worth.html" class="hover:text-[#b37a1a]">Fort Worth</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/texas/locksmith-in-houston.html" class="hover:text-[#b37a1a]">Houston</a></li>
+            <li class="flex items-center gap-2"><span class="material-icons text-yellow-400 text-base">location_on</span><a href="/key-kong-locksmith-2025-main/service-areas/texas/locksmith-in-san-antonio.html" class="hover:text-[#b37a1a]">San Antonio</a></li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</li>
+
+
+      <!-- Other Links -->
+      <li><a href="/key-kong-locksmith-2025-main/nav/faq.html" class="font-semibold hover:text-[#FFAA33] transition duration-300">FAQ</a></li>
+      <li><a href="/key-kong-locksmith-2025-main/nav/reviews.html" class="font-semibold hover:text-[#FFAA33] transition duration-300">Reviews</a></li>
+      <li><a href="/key-kong-locksmith-2025-main/nav/about.html" class="font-semibold hover:text-[#FFAA33] transition duration-300">About</a></li>
+      <li><a href="/key-kong-locksmith-2025-main/nav/contact.html" class="font-semibold hover:text-[#FFAA33] transition duration-300">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center lg:hidden space-x-1">
+      <!-- Call Icon -->
+      <a href="tel:+12109006996" class="p-2 bg-[#FFC000] hover:bg-[#F4C430] text-white hover:text-black transition rounded-md flex items-center justify-center">
+        <span class="material-icons text-2xl">phone</span>
+      </a>
+
+      <!-- Book Icon -->
+      <a href="/key-kong-locksmith-2025-main/nav/book-online.html" class="p-2 bg-[#FFC000] hover:bg-[#F4C430] text-white hover:text-black transition rounded-md flex items-center justify-center">
+        <span class="material-icons text-2xl">calendar_today</span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="flex items-center text-[#111111] p-2" onclick="toggleMobileMenu()">
+        <span class="material-icons text-3xl">menu</span>
+      </button>
+    </div>
+
+
+    <!-- Action Buttons -->
+    <div class="hidden lg:flex items-center space-x-4">
+      <a href="tel:2109006996" class="flex items-center space-x-2 bg-[#FFC000] hover:bg-[#F4C430] hover:text-black transition-all duration-300 rounded-md px-5 py-3 font-semibold text-white transform hover:scale-105">
+        <span class="material-icons text-lg">phone</span>
+        <span>Call Us</span>
+      </a>
+      <a href="/key-kong-locksmith-2025-main/nav/book-online.html" class="flex items-center space-x-2 bg-[#FFC000] hover:bg-[#F4C430] hover:text-black transition-all duration-300 rounded-md px-5 py-3 font-semibold text-white transform hover:scale-105">
+        <span class="material-icons text-lg">calendar_today</span>
+        <span>Book Service</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div id="mobileMenu" class="fixed top-16 left-0 right-0 bg-white border-b border-[#d4b25a] shadow-lg z-40 hidden lg:hidden overflow-y-auto max-h-[calc(100vh-4rem)]">  <ul class="flex flex-col space-y-4 p-4 text-sm text-[#111111]">
+    <li>
+      <button class="w-full text-left flex justify-between items-center font-semibold hover:text-[#FFAA33]" onclick="toggleSubMenu('mobileServices')">
+        Our Services <span class="material-icons text-base">expand_more</span>
+      </button>
+      <ul id="mobileServices" class="hidden flex-col pl-4 mt-2 space-y-2">
+        <!-- Emergency Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">warning</span>
+              Emergency Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/car-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Lockout</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/house-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">House Lockout</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/business-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Business Lockout</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/storage-unit-lockout.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Storage Unit Lockout</a></li>
+            </ul>
+          </div>
+          <!-- Residential Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">home</span>
+              Residential Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-replacement.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Lock Replacement</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-rekey.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Lock Rekey</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-repair.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Lock Repair</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/gate-lock.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Gate Locks</a></li>
+            </ul>
+          </div>
+          <!-- Commercial Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">business</span>
+              Commercial Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/commercial-lock-replacements.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Commercial Lock Replacement</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/commercial-lock-rekey.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Commercial Lock Rekey</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/emergency-exit-devices.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Emergency Exit Devices</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/master-key-systems.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Master Key Systems</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/access-control.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Access Control</a></li>
+            </ul>
+          </div>
+          <!-- Automotive Locksmith -->
+          <div>
+            <h3 class="font-semibold text-[#FFAF1E] mb-2 flex items-center gap-2">
+              <span class="material-icons text-[#FFAF1E]">directions_car</span>
+              Automotive Locksmith
+            </h3>
+            <ul class="space-y-1 text-sm text-[#111111]">
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-replacement.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Key Replacement</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/key-fob-programming.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Key Fob Programming</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-duplicate.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Key Duplicate</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-cutting.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Car Key Cutting</a></li>
+              <li><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/ignition-lock-cylinder.html" class="hover:text-[#FFAA33] hover:underline transition-all duration-300">Ignition Lock Cylinder</a></li>
+            </ul>
+          </div>
+      </ul>
+    </li>
+    <li>
+      <button class="w-full text-left flex justify-between items-center font-semibold hover:text-[#FFAA33]" onclick="toggleSubMenu('mobileAreas')">
+        Service Areas <span class="material-icons text-base">expand_more</span>
+      </button>
+      <ul id="mobileAreas" class="hidden flex-col pl-4 mt-2 space-y-2">
+        <li class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/california.html" class="hover:text-[#b37a1a]">California</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/florida.html" class="hover:text-[#b37a1a]">Florida</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/georgia.html" class="hover:text-[#b37a1a]">Georgia</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/new-jersey.html" class="hover:text-[#b37a1a]">New Jersey</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="material-icons text-yellow-400 text-base">location_on</span>
+          <a href="/key-kong-locksmith-2025-main/service-areas/texas.html" class="hover:text-[#b37a1a]">Texas</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="/key-kong-locksmith-2025-main/nav/faq.html" class="hover:text-[#FFAA33] font-semibold">FAQ</a></li>
+    <li><a href="/key-kong-locksmith-2025-main/nav/reviews.html" class="hover:text-[#FFAA33] font-semibold">Reviews</a></li>
+    <li><a href="/key-kong-locksmith-2025-main/nav/about.html" class="hover:text-[#FFAA33] font-semibold">About</a></li>
+    <li><a href="/key-kong-locksmith-2025-main/nav/contact.html" class="hover:text-[#FFAA33] font-semibold">Contact</a></li>
+  </ul>
+
+  <!-- Mobile Action Buttons -->
+  <div class="flex flex-col space-y-2 p-4 border-t border-[#d4b25a] mt-2">
+    <a href="tel:+12109006996" class="flex items-center justify-center space-x-2 bg-[#FFC000] hover:bg-[#F4C430] hover:text-black transition-all duration-300 rounded-md px-5 py-3 font-semibold text-white transform hover:scale-105">
+      <span class="material-icons text-lg">phone</span>
+      <span>Call Us</span>
+    </a>
+    <a href="/key-kong-locksmith-2025-main/nav/book-online.html" class="flex items-center justify-center space-x-2 bg-[#FFC000] hover:bg-[#F4C430] hover:text-black transition-all duration-300 rounded-md px-5 py-3 font-semibold text-white transform hover:scale-105">
+      <span class="material-icons text-lg">calendar_today</span>
+      <span>Book Service</span>
+    </a>
+  </div>
+</div>
+
+<!-- Enhanced Sitemap Section -->
+<section class="sitemap-section min-h-screen pt-32 pb-20 relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header with Search -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-[#FFAA33] to-[#FFD700] rounded-full mb-6 shadow-lg">
+        <span class="material-icons text-white text-3xl">map</span>
+      </div>
+      <h1 class="text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+        Website <span class="text-[#FFAA33]">Sitemap</span>
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Navigate through all our locksmith services and find exactly what you need
+      </p>
+      
+      <!-- Search Box -->
+      <div class="max-w-md mx-auto relative">
+        <input 
+          type="text" 
+          placeholder="Search sitemap..." 
+          class="search-box w-full px-6 py-4 rounded-full text-gray-700 focus:outline-none"
+          onkeyup="filterSitemap(this.value)"
+        />
+        <span class="material-icons absolute right-6 top-1/2 transform -translate-y-1/2 text-[#FFAA33]">search</span>
+      </div>
+    </div>
+
+    <!-- Sitemap Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="sitemapGrid">
+
+      <!-- Main Pages Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">home</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Main Pages</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Home</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/about.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>About Us</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/services.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Services</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/serviceareas.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Service Areas</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/faq.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>FAQ</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/reviews.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Reviews</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/contact.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Contact</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/book-online.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Book Online</a></li>
+        </ul>
+      </div>
+
+      <!-- Emergency Locksmith Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">emergency</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Emergency</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Emergency Services</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/car-lockout.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Car Lockout</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/house-lockout.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>House Lockout</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/business-lockout.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Business Lockout</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/emergency-locksmith/storage-unit-lockout.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Storage Unit Lockout</a></li>
+        </ul>
+      </div>
+
+      <!-- Residential Locksmith Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">house</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Residential</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/residential-locksmith.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Residential Services</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-replacement.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Lock Replacement</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-rekey.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Lock Rekey</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/lock-repair.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Lock Repair</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/residential-locksmith/gate-lock.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Gate Locks</a></li>
+        </ul>
+      </div>
+
+      <!-- Commercial Locksmith Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">business</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Commercial</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Commercial Services</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/commercial-lock-replacements.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Lock Replacement</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/commercial-lock-rekey.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Lock Rekey</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/emergency-exit-devices.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Emergency Exit Device</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/master-key-systems.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Master Key Systems</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/commercial-locksmith/access-control.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Access Control</a></li>
+        </ul>
+      </div>
+
+      <!-- Auto Locksmith Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">directions_car</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Automotive</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Auto Services</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-replacement.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Car Key Replacement</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/key-fob-programming.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Key Fob Programming</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-duplicate.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Car Key Duplicate</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/car-key-cutting.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Car Key Cutting</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/services/automotive-locksmith/ignition-lock-cylinder.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Ignition Lock Cylinder</a></li>
+        </ul>
+      </div>
+
+      <!-- Service Areas Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">place</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Service Areas</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/serviceareas.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>All Service Areas</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/service-areas/north-bergen.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>North Bergen</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/service-areas/jersey-city.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Jersey City</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/service-areas/hoboken.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Hoboken</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/service-areas/weehawken.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Weehawken</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/service-areas/union-city.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Union City</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/service-areas/west-new-york.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>West New York</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal & Information Card -->
+      <div class="sitemap-card rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="category-icon w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md">
+            <span class="material-icons text-white text-xl">gavel</span>
+          </div>
+          <h3 class="text-[#FFAA33] font-bold text-xl">Legal & Info</h3>
+        </div>
+        <ul class="space-y-1 text-gray-700">
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/legal/privacy-policy.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Privacy Policy</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/legal/terms-and-conditions.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Terms & Conditions</a></li>
+          <li class="link-item"><a href="/key-kong-locksmith-2025-main/nav/sitemap.html" class="flex items-center"><span class="material-icons text-[#FFAA33] mr-2 text-sm">keyboard_arrow_right</span>Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="bg-black text-white pt-12 pb-6 px-6 md:px-12 border-t-2 border-yellow-600">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+        <!-- Company Info -->
+        <div>
+            <img src="../images/footer-logo.webp" alt="Key-Kong Logo" class="mb-4 w-31">
+            <p class="mb-4 text-gray-300">
+            Professional locksmith services available 24/7 in North Bergen and surrounding areas.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center"><span class="material-icons text-[#FFAF1E] mr-2">call</span> <strong>210-900-6996</strong></li>
+            <li class="flex items-center"><span class="material-icons text-[#FFAF1E] mr-2">email</span>info@key-kong-locksmith.com</li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+            <h4 class="text-yellow-500 font-semibold mb-3">Services</h4>
+            <ul class="space-y-2">
+            <li class="flex items-center"><span class="material-icons text-[#FFAF1E] mr-2">schedule</span> Emergency Locksmith</li>
+            <li class="flex items-center"><span class="material-icons text-[#FFAF1E] mr-2">bolt</span> Residential Locksmith</li>
+            <li class="flex items-center"><span class="material-icons text-[#FFAF1E] mr-2">build</span> Commercial Locksmith</li>
+            <li class="flex items-center"><span class="material-icons text-[#FFAF1E] mr-2">door_front</span> Automotive Locksmith</li>
+            </ul>
+        </div>
+
+        <!-- Service Areas -->
+        <div>
+            <h4 class="text-yellow-500 font-semibold mb-3">Service Areas</h4>
+            <ul class="space-y-2 text-gray-300">
+                <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-5.25-6-12a6 6 0 1112 0c0 6.75-6 12-6 12z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                California
+                </li>
+                <li class="flex items-center">
+                <svg class="w-5 h-5 text-[#FFAF1E] mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-5.25-6-12a6 6 0 1112 0c0 6.75-6 12-6 12z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                Florida
+                </li>
+                <li class="flex items-center">
+                <svg class="w-5 h-5 text-[#FFAF1E] mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-5.25-6-12a6 6 0 1112 0c0 6.75-6 12-6 12z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                Georgia
+                </li>
+                <li class="flex items-center">
+                <svg class="w-5 h-5 text-[#FFAF1E] mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-5.25-6-12a6 6 0 1112 0c0 6.75-6 12-6 12z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                New Jersey
+                </li>
+                <li class="flex items-center">
+                <svg class="w-5 h-5 text-[#FFAF1E] mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-5.25-6-12a6 6 0 1112 0c0 6.75-6 12-6 12z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                Texas
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Quick Links & Social -->
+        <div class="mt-6 md:mt-0">
+              <h4 class="text-yellow-500 font-semibold mb-3">Quick Links</h4>
+              <ul class="space-y-2">
+                  <li>
+                    <a href="/key-kong-locksmith-2025-main/nav/about.html" class="flex items-center text-gray-300 hover:text-yellow-500 transition">
+                        <span class="material-icons text-[#FFAF1E] mr-2">info</span> About Us
+                    </a>
+                  </li>
+                  <li>
+                  <a href="/key-kong-locksmith-2025-main/nav/services.html" class="flex items-center text-gray-300 hover:text-[#FFAA33] transition-colors">
+                      <span class="material-icons mr-2 text-[#FFAA33]">build</span>
+                      Services
+                  </a>
+                  </li>
+                  <li>
+                  <a href="/key-kong-locksmith-2025-main/nav/serviceareas.html" class="flex items-center text-gray-300 hover:text-[#FFAA33] transition-colors">
+                      <span class="material-icons mr-2 text-[#FFAA33]">place</span>
+                      Service Areas
+                  </a>
+                  </li>
+                  <li>
+                  <a href="/key-kong-locksmith-2025-main/nav/faq.html" class="flex items-center text-gray-300 hover:text-yellow-500 transition">
+                      <span class="material-icons text-[#FFAF1E] mr-2">help</span> FAQ
+                  </a>
+                  </li>
+                  <li>
+                  <a href="/key-kong-locksmith-2025-main/nav/reviews.html" class="flex items-center text-gray-300 hover:text-yellow-500 transition">
+                      <span class="material-icons text-[#FFAF1E] mr-2">star</span> Reviews
+                  </a>
+                  </li>
+                  <li>
+                  <a href="/key-kong-locksmith-2025-main/nav/contact.html" class="flex items-center text-gray-300 hover:text-yellow-500 transition">
+                      <span class="material-icons text-[#FFAF1E] mr-2">contacts</span> Contact
+                  </a>
+                  </li>
+                  <li>
+                  </li>
+                  <li>
+                  <a href="/key-kong-locksmith-2025-main/nav/sitemap.html" class="flex items-center text-gray-300 hover:text-yellow-500 transition">
+                      <span class="material-icons text-[#FFAF1E] mr-2">list</span> Sitemap
+                  </a>
+                  </li>
+              </ul>
+          </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-10 pt-6 border-t border-yellow-600 text-center text-gray-400 text-sm">
+      <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6">
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <span class="flex items-center"><span class="material-icons text-yellow-500 mr-1">verified</span> Licensed & Insured</span>
+          <span class="flex items-center"><span class="material-icons text-yellow-500 mr-1">star</span> 5.0★ Rated</span>
+        </div>
+        <div>
+          <p>© 2023 Key Kong Locksmith, LLC</p>
+          <div class="space-x-4 mt-2">
+            <a href="/key-kong-locksmith-2025-main/legal/privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+            <a href="/key-kong-locksmith-2025-main/legal/terms-and-conditions.html" class="hover:text-white">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+     function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+    }
+
+    function toggleSubMenu(id) {
+      const submenu = document.getElementById(id);
+      submenu.classList.toggle('hidden');
+    }
+  </script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <script>
+    function filterSitemap(searchTerm) {
+      const cards = document.querySelectorAll('.sitemap-card');
+      const searchLower = searchTerm.toLowerCase();
+      
+      cards.forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        const links = card.querySelectorAll('.link-item');
+        let hasMatch = false;
+        
+        // Check if card title matches
+        if (cardText.includes(searchLower)) {
+          hasMatch = true;
+        }
+        
+        // Show/hide individual links
+        links.forEach(link => {
+          const linkText = link.textContent.toLowerCase();
+          if (linkText.includes(searchLower) || searchTerm === '') {
+            link.style.display = 'block';
+            if (searchTerm !== '') hasMatch = true;
+          } else {
+            link.style.display = 'none';
+          }
+        });
+        
+        // Show/hide entire card
+        if (hasMatch || searchTerm === '') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

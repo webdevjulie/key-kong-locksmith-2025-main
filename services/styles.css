@@ -1,0 +1,31 @@
+@media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        [x-cloak] { display: none !important; }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 175, 30, 0.15);
+        }
+        .faq-content {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+        .read-more-link {
+            background: linear-gradient(90deg, #FFAF1E 0%, #d97706 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }

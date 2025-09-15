@@ -1,0 +1,7 @@
+# Node / Composer / IDE / System
+node_modules/
+vendor/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
