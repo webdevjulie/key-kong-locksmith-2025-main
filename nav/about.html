@@ -9,6 +9,29 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
     <script src="script.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-orange': '#FFAF1E',
+              'brand-orange-dark': '#E6991A',
+              'brand-black': '#000000',
+              'soft-black': '#1a1a1a',
+              'cream-bg': '#fefcf9',
+            },
+            fontFamily: {
+              'poppins': ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.6s ease-out',
+              'bounce-subtle': 'bounceSubtle 2s infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            }
+          }
+        }
+      }
+    </script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -771,11 +794,191 @@
         </div>
     </section>
 
+    <section class="bg-gradient-to-br from-[#fefcf9] to-[#fdf7ef] py-16 px-4 md:px-10">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full mb-6 shadow-lg">
+                <span class="material-icons text-3xl text-white">help_outline</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="bg-gradient-to-r from-[#FFAF1E] to-[#d97706] bg-clip-text text-transparent">
+                    Frequently Asked Questions
+                </span>
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                <span class="font-medium text-yellow-700">Find answers to common questions about our services.</span>
+            </p>
+        </div>
 
-    <section class="gradient-bg py-16 px-4 sm:px-6">
-        <div class="container mx-auto text-center max-w-5xl">
+        <div class="max-w-4xl mx-auto space-y-4" x-data="{ selected: null }">
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item border border-[#d4b25a]/40 rounded-xl shadow-md bg-white/80 backdrop-blur-sm overflow-hidden">
+                <button @click="selected !== 1 ? selected = 1 : selected = null" 
+                        class="flex justify-between items-center w-full p-6 text-left hover:bg-yellow-50/50 transition-colors">
+                    <span class="font-semibold text-lg md:text-xl text-gray-800">What areas do you serve?</span>
+                    <div class="flex-shrink-0 ml-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 flex items-center justify-center">
+                            <span class="material-icons text-white text-sm expand-icon" 
+                                  :class="selected === 1 ? 'rotate-45' : ''">add</span>
+                        </div>
+                    </div>
+                </button>
+                <div x-show="selected === 1" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 max-h-0"
+                     x-transition:enter-end="opacity-100 max-h-96"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 max-h-96"
+                     x-transition:leave-end="opacity-0 max-h-0"
+                     class="faq-content overflow-hidden" x-cloak>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <p class="text-gray-700 text-base leading-relaxed">
+                                We serve North Bergen and surrounding areas including Jersey City, Los Angeles, Dallas, Miami, Atlanta, Columbus, and San Francisno.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item border border-[#d4b25a]/40 rounded-xl shadow-md bg-white/80 backdrop-blur-sm overflow-hidden">
+                <button @click="selected !== 2 ? selected = 2 : selected = null" 
+                        class="flex justify-between items-center w-full p-6 text-left hover:bg-yellow-50/50 transition-colors">
+                    <span class="font-semibold text-lg md:text-xl text-gray-800">Can you help right now?</span>
+                    <div class="flex-shrink-0 ml-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 flex items-center justify-center">
+                            <span class="material-icons text-white text-sm expand-icon" 
+                                  :class="selected === 2 ? 'rotate-45' : ''">add</span>
+                        </div>
+                    </div>
+                </button>
+                <div x-show="selected === 2" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 max-h-0"
+                     x-transition:enter-end="opacity-100 max-h-96"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 max-h-96"
+                     x-transition:leave-end="opacity-0 max-h-0"
+                     class="faq-content overflow-hidden" x-cloak>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <p class="text-gray-700 text-base leading-relaxed">
+                                Yes, we provide responsive emergency service throughout our service area.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item border border-[#d4b25a]/40 rounded-xl shadow-md bg-white/80 backdrop-blur-sm overflow-hidden">
+                <button @click="selected !== 3 ? selected = 3 : selected = null" 
+                        class="flex justify-between items-center w-full p-6 text-left hover:bg-yellow-50/50 transition-colors">
+                    <span class="font-semibold text-lg md:text-xl text-gray-800">Do you provide free estimates?</span>
+                    <div class="flex-shrink-0 ml-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 flex items-center justify-center">
+                            <span class="material-icons text-white text-sm expand-icon" 
+                                  :class="selected === 3 ? 'rotate-45' : ''">add</span>
+                        </div>
+                    </div>
+                </button>
+                <div x-show="selected === 3" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 max-h-0"
+                     x-transition:enter-end="opacity-100 max-h-96"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 max-h-96"
+                     x-transition:leave-end="opacity-0 max-h-0"
+                     class="faq-content overflow-hidden" x-cloak>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <p class="text-gray-700 text-base leading-relaxed">
+                                Yes, we provide free estimates for all our services. Contact us to get a quote.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item border border-[#d4b25a]/40 rounded-xl shadow-md bg-white/80 backdrop-blur-sm overflow-hidden">
+                <button @click="selected !== 4 ? selected = 4 : selected = null" 
+                        class="flex justify-between items-center w-full p-6 text-left hover:bg-yellow-50/50 transition-colors">
+                    <span class="font-semibold text-lg md:text-xl text-gray-800">Do you offer warranties on your work?</span>
+                    <div class="flex-shrink-0 ml-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 flex items-center justify-center">
+                            <span class="material-icons text-white text-sm expand-icon" 
+                                  :class="selected === 4 ? 'rotate-45' : ''">add</span>
+                        </div>
+                    </div>
+                </button>
+                <div x-show="selected === 4" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 max-h-0"
+                     x-transition:enter-end="opacity-100 max-h-96"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 max-h-96"
+                     x-transition:leave-end="opacity-0 max-h-0"
+                     class="faq-content overflow-hidden" x-cloak>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <p class="text-gray-700 text-base leading-relaxed">
+                                Yes, we provide warranties on all our workmanship and installed products.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item border border-[#d4b25a]/40 rounded-xl shadow-md bg-white/80 backdrop-blur-sm overflow-hidden">
+                <button @click="selected !== 5 ? selected = 5 : selected = null" 
+                        class="flex justify-between items-center w-full p-6 text-left hover:bg-yellow-50/50 transition-colors">
+                    <span class="font-semibold text-lg md:text-xl text-gray-800">Do you work with smart home security systems?</span>
+                    <div class="flex-shrink-0 ml-4">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 flex items-center justify-center">
+                            <span class="material-icons text-white text-sm expand-icon" 
+                                  :class="selected === 5 ? 'rotate-45' : ''">add</span>
+                        </div>
+                    </div>
+                </button>
+                <div x-show="selected === 5" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 max-h-0"
+                     x-transition:enter-end="opacity-100 max-h-96"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 max-h-96"
+                     x-transition:leave-end="opacity-0 max-h-0"
+                     class="faq-content overflow-hidden" x-cloak>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                            <p class="text-gray-700 text-base leading-relaxed">
+                                Yes, we install and service various smart home security systems and smart locks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Read More Link -->
+            <div class="flex justify-center">
+              <a href="/key-kong-locksmith-2025-main/nav/faq.html" class="call-button flex items-center justify-center space-x-2 
+                       bg-gradient-to-r from-[#FFAA33] to-[#FFAA33] 
+                       hover:from-[#F4C430] hover:to-[#F4C430] hover:text-black
+                       transition-all duration-300 rounded-xl px-6 py-3 
+                       font-bold text-[#f9f9ef] text-base shadow-lg">
+                <span class="material-icons text-xl">menu_book</span>
+                <span>Read All Our FAQ</span>
+              </a>
+            </div>
+        </div>
+    </section>
+
+      <section class="bg-[#fefcf9] py-20 px-4 sm:px-6">
+        <div class="container mx-auto text-center max-w-6xl">
             <!-- Header -->
-            <div class="mb-12">
+           <div class="mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#FFAF1E] mb-4 leading-tight">
                     What our Client Says
                 </h2>
@@ -784,88 +987,125 @@
                 </p>
             </div>
 
-            <div class="flex flex-col lg:flex-row justify-center gap-6 mb-10">
+            <div class="flex flex-col lg:flex-row justify-center gap-8 mb-12">
                 <!-- Review 1 -->
-                <div class="review-card bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg border-2 border-yellow-200/50 hover:border-yellow-300/80 w-full lg:w-80">
-                    <div class="flex items-center mb-4">
-                        <div class="avatar w-10 h-10 rounded-full text-white flex items-center justify-center mr-3 font-bold text-base shadow">
+                <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full lg:w-96 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="avatar w-14 h-14 rounded-full text-white flex items-center justify-center mr-4 font-bold text-lg shadow-lg">
                             PM
                         </div>
                         <div class="text-left">
-                            <p class="text-base font-bold text-gray-800">Patricia Martinez</p>
-                            <p class="text-xs text-gray-500 flex items-center">
-                                <span class="material-icons text-xs mr-1">location_on</span>
+                            <p class="text-lg font-bold text-gray-800">Patricia Martinez</p>
+                            <p class="text-sm text-gray-500 flex items-center mt-1">
+                                <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
                                 Weehawken, NJ
                             </p>
                         </div>
                     </div>
                     
-                    <div class="mb-4">
-                        <span class="material-icons text-3xl text-yellow-400 opacity-50 mb-1">format_quote</span>
-                        <p class="text-gray-700 leading-relaxed text-left text-sm">
-                            Excellent service installing smart locks in my home. Very knowledgeable about home automation and security integration.
-                        </p>
+                    <div class="mb-6 relative">
+                        <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                            <span class="material-icons text-2xl quote-icon">format_quote</span>
+                        </div>
+                        <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                            <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                                Excellent service installing smart locks in my home. Very knowledgeable about home automation and security integration.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div class="flex justify-between items-center text-sm">
+                    <div class="flex justify-between items-center">
                         <div class="flex space-x-1">
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 0">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 1">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 2">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 3">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 4">star</span>
                         </div>
-                        <div class="bg-gradient-to-r from-[#d4b25a]/20 to-[#b37a1a]/20 px-2 py-0.5 rounded-full">
-                            <span class="text-[#b37a1a] font-semibold text-xs">Smart Lock Installation</span>
+                        <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full ">
+                            <span class="text-[#b37a1a] font-semibold text-sm">Smart Lock Installation</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="review-card bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg border-2 border-yellow-200/50 hover:border-yellow-300/80 w-full lg:w-80">
-                    <div class="flex items-center mb-4">
-                        <div class="avatar w-10 h-10 rounded-full text-white flex items-center justify-center mr-3 font-bold text-base shadow">
+                <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full lg:w-96 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="avatar w-14 h-14 rounded-full text-white flex items-center justify-center mr-4 font-bold text-lg shadow-lg" style="animation-delay: 1.5s">
                             AJ
                         </div>
                         <div class="text-left">
-                            <p class="text-base font-bold text-gray-800">Alex Johnson</p>
-                            <p class="text-xs text-gray-500 flex items-center">
-                                <span class="material-icons text-xs mr-1">location_on</span>
+                            <p class="text-lg font-bold text-gray-800">Alex Johnson</p>
+                            <p class="text-sm text-gray-500 flex items-center mt-1">
+                                <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
                                 North Bergen, NJ
                             </p>
                         </div>
                     </div>
                     
-                    <div class="mb-4">
-                        <span class="material-icons text-3xl text-yellow-400 opacity-50 mb-1">format_quote</span>
-                        <p class="text-gray-700 leading-relaxed text-left text-sm">
-                            Had my car key replaced in North Bergen. Quick service and fair pricing. The new key works perfectly!
-                        </p>
+                    <div class="mb-6 relative">
+                        <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                            <span class="material-icons text-2xl quote-icon">format_quote</span>
+                        </div>
+                        <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                            <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                                Had my car key replaced in North Bergen. Quick service and fair pricing. The new key works perfectly!
+                            </p>
+                        </div>
                     </div>
                     
-                    <div class="flex justify-between items-center text-sm">
+                    <div class="flex justify-between items-center">
                         <div class="flex space-x-1">
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-base">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 0">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 1">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 2">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 3">star</span>
+                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 4">star</span>
                         </div>
-                        <div class="bg-gradient-to-r from-[#d4b25a]/20 to-[#b37a1a]/20 px-2 py-0.5 rounded-full">
-                            <span class="text-[#b37a1a] font-semibold text-xs">Car Key Replacement</span>
+                        <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                            <span class="text-[#b37a1a] font-semibold text-sm">Car Key Replacement</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Read More Link -->
-            <div class="text-center">
-                <a href="reviews.html" class="read-more-link inline-flex items-center text-lg font-semibold text-yellow-500 hover:text-[#b37a1a] group">
-                    <span>Read All Our Reviews</span>
-                    <span class="material-icons ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
+            <div class="flex justify-center">
+              <a href="/key-kong-locksmith-2025-main/nav/reviews.html" class="call-button flex items-center justify-center space-x-2 
+                       bg-gradient-to-r from-[#FFAA33] to-[#FFAA33] 
+                       hover:from-[#F4C430] hover:to-[#F4C430] hover:text-black
+                       transition-all duration-300 rounded-xl px-6 py-3 
+                       font-bold text-[#f9f9ef] text-base shadow-lg">
+                <span class="material-icons text-xl">menu_book</span>
+                <span>Read All Our Reviews</span>
+              </a>
             </div>
         </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class=" bg-[#fefcf9] max-w-7xl mx-auto px-6 py-20">
+      <div class="glass-effect rounded-3xl p-10 text-center border border-brand-orange/20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-orange/10 to-transparent"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <span class="material-icons text-3xl text-brand-orange">emergency</span>
+            <h2 class="text-3xl font-bold text-black">Need Professional Lockout Service?</h2>
+          </div>
+          <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Our professional team is ready to help. Contact us now for quick assistance.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+12109006996" 
+              class="group bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-orange text-black font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
+              <span class="material-icons text-xl group-hover:rotate-12 transition-transform">phone</span>
+              (210) 900-6996
+            </a>
+            <a href="/key-kong-locksmith-2025-main/nav/book-online.html" class="group glass-effect-dark border border-brand-orange/30 hover:border-brand-orange text-black font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-black/10 flex items-center justify-center gap-3">
+              <span class="material-icons text-xl group-hover:translate-x-1 transition-transform">calendar_today</span>
+              Book Online
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 </main>
 
