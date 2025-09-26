@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="script.js"></script>
     <style>
@@ -1178,113 +1178,294 @@
         </div>
       </section>
 
-      <section class="bg-[#fefcf9] py-20 px-4 sm:px-6">
-        <div class="container mx-auto text-center max-w-6xl">
-            <!-- Header -->
-           <div class="mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#FFAF1E] mb-4 leading-tight">
-                    What our Client Says
-                </h2>
-                <p class="text-base md:text-lg text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed">
-                    Don't just take our word for it — here's what our satisfied customers have to say.
-                </p>
-            </div>
-
-            <div class="flex flex-col lg:flex-row justify-center gap-8 mb-12">
-                <!-- Review 1 -->
-                <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full lg:w-96 backdrop-blur-sm">
-                    <div class="flex items-center mb-6">
-                        <div class="avatar w-14 h-14 rounded-full text-white flex items-center justify-center mr-4 font-bold text-lg shadow-lg">
-                            PM
-                        </div>
-                        <div class="text-left">
-                            <p class="text-lg font-bold text-gray-800">Patricia Martinez</p>
-                            <p class="text-sm text-gray-500 flex items-center mt-1">
-                                <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
-                                Weehawken, NJ
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6 relative">
-                        <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
-                            <span class="material-icons text-2xl quote-icon">format_quote</span>
-                        </div>
-                        <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
-                            <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
-                                Excellent service installing smart locks in my home. Very knowledgeable about home automation and security integration.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="flex space-x-1">
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 0">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 1">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 2">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 3">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 4">star</span>
-                        </div>
-                        <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full ">
-                            <span class="text-[#b37a1a] font-semibold text-sm">Smart Lock Installation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full lg:w-96 backdrop-blur-sm">
-                    <div class="flex items-center mb-6">
-                        <div class="avatar w-14 h-14 rounded-full text-white flex items-center justify-center mr-4 font-bold text-lg shadow-lg" style="animation-delay: 1.5s">
-                            AJ
-                        </div>
-                        <div class="text-left">
-                            <p class="text-lg font-bold text-gray-800">Alex Johnson</p>
-                            <p class="text-sm text-gray-500 flex items-center mt-1">
-                                <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
-                                North Bergen, NJ
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6 relative">
-                        <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
-                            <span class="material-icons text-2xl quote-icon">format_quote</span>
-                        </div>
-                        <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
-                            <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
-                                Had my car key replaced in North Bergen. Quick service and fair pricing. The new key works perfectly!
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="flex space-x-1">
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 0">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 1">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 2">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 3">star</span>
-                            <span class="material-icons text-yellow-400 star-icon text-lg" style="--delay: 4">star</span>
-                        </div>
-                        <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
-                            <span class="text-[#b37a1a] font-semibold text-sm">Car Key Replacement</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Read More Link -->
-            <div class="flex justify-center">
-              <a href="/key-kong-locksmith-2025-main/nav/reviews.html" class="call-button flex items-center justify-center space-x-2 
-                       bg-gradient-to-r from-[#FFAA33] to-[#FFAA33] 
-                       hover:from-[#F4C430] hover:to-[#F4C430] hover:text-black
-                       transition-all duration-300 rounded-xl px-6 py-3 
-                       font-bold text-[#f9f9ef] text-base shadow-lg">
-                <span class="material-icons text-xl">menu_book</span>
-                <span>Read All Our Reviews</span>
-              </a>
-            </div>
+          <section class="bg-[#fefcf9] py-20 px-4 sm:px-6">
+      <div class="container mx-auto text-center max-w-6xl">
+        <!-- Header -->
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#FFAF1E] mb-4 leading-tight">
+            What our Client Says
+          </h2>
+          <p
+            class="text-base md:text-lg text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed"
+          >
+            Don't just take our word for it — here's what our satisfied customers
+            have to say.
+          </p>
         </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Review 1 -->
+            <div class="swiper-slide flex">
+              <div
+                class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full backdrop-blur-sm flex flex-col justify-between h-[420px]"
+              >
+                <div>
+                  <!-- Top -->
+                  <div class="flex items-center mb-6">
+                    <div class="avatar w-14 h-14 rounded-full text-black flex items-center justify-center mr-4 font-bold text-lg shadow-lg">PM</div>
+                    <div class="text-left">
+                      <p class="text-lg font-bold text-gray-800">Patricia Martinez</p>
+                      <p class="text-sm text-gray-500 flex items-center mt-1">
+                        <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
+                        Weehawken, NJ
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Review Text -->
+                  <div class="mb-6 relative">
+                    <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                      <span class="material-icons text-2xl quote-icon">format_quote</span>
+                    </div>
+                    <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                      <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                        Excellent service installing smart locks in my home. Very knowledgeable about home automation and security integration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom -->
+                <div class="flex justify-between items-center mt-auto">
+                  <div class="flex space-x-1">
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                  </div>
+                  <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                    <span class="text-[#b37a1a] font-semibold text-sm">Smart Lock Installation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="swiper-slide flex">
+              <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full backdrop-blur-sm flex flex-col justify-between h-[420px]">
+                <div>
+                  <div class="flex items-center mb-6">
+                    <div class="avatar w-14 h-14 rounded-full text-black flex items-center justify-center mr-4 font-bold text-lg shadow-lg">JD</div>
+                    <div class="text-left">
+                      <p class="text-lg font-bold text-gray-800">James Daniels</p>
+                      <p class="text-sm text-gray-500 flex items-center mt-1">
+                        <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
+                        Hoboken, NJ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mb-6 relative">
+                    <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                      <span class="material-icons text-2xl quote-icon">format_quote</span>
+                    </div>
+                    <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                      <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                        Quick response when I was locked out of my car. They arrived within 15 minutes and had me back on the road in no time!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <div class="flex space-x-1">
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star_half</span>
+                  </div>
+                  <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                    <span class="text-[#b37a1a] font-semibold text-sm">Emergency Car Lockout</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="swiper-slide flex">
+              <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full backdrop-blur-sm flex flex-col justify-between h-[420px]">
+                <div>
+                  <div class="flex items-center mb-6">
+                    <div class="avatar w-14 h-14 rounded-full text-black flex items-center justify-center mr-4 font-bold text-lg shadow-lg">LS</div>
+                    <div class="text-left">
+                      <p class="text-lg font-bold text-gray-800">Laura Smith</p>
+                      <p class="text-sm text-gray-500 flex items-center mt-1">
+                        <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
+                        Jersey City, NJ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mb-6 relative">
+                    <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                      <span class="material-icons text-2xl quote-icon">format_quote</span>
+                    </div>
+                    <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                      <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                        Professional locksmith who rekeyed all the locks in my apartment after moving in. Affordable and very reliable.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <div class="flex space-x-1">
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                  </div>
+                  <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                    <span class="text-[#b37a1a] font-semibold text-sm">Rekeying Services</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="swiper-slide flex">
+              <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full backdrop-blur-sm flex flex-col justify-between h-[420px]">
+                <div>
+                  <div class="flex items-center mb-6">
+                    <div class="avatar w-14 h-14 rounded-full text-black flex items-center justify-center mr-4 font-bold text-lg shadow-lg">MT</div>
+                    <div class="text-left">
+                      <p class="text-lg font-bold text-gray-800">Michael Thompson</p>
+                      <p class="text-sm text-gray-500 flex items-center mt-1">
+                        <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
+                        Newark, NJ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mb-6 relative">
+                    <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                      <span class="material-icons text-2xl quote-icon">format_quote</span>
+                    </div>
+                    <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                      <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                        They upgraded my office with high-security locks and access control. Smooth installation and great customer service.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <div class="flex space-x-1">
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                  </div>
+                  <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                    <span class="text-[#b37a1a] font-semibold text-sm">Commercial Security</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="swiper-slide flex">
+              <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full backdrop-blur-sm flex flex-col justify-between h-[420px]">
+                <div>
+                  <div class="flex items-center mb-6">
+                    <div class="avatar w-14 h-14 rounded-full text-black flex items-center justify-center mr-4 font-bold text-lg shadow-lg">ER</div>
+                    <div class="text-left">
+                      <p class="text-lg font-bold text-gray-800">Emily Rodriguez</p>
+                      <p class="text-sm text-gray-500 flex items-center mt-1">
+                        <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
+                        Union City, NJ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mb-6 relative">
+                    <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                      <span class="material-icons text-2xl quote-icon">format_quote</span>
+                    </div>
+                    <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                      <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                        Great locksmith! They fixed my broken front door lock and gave me advice on upgrading to a more secure option.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <div class="flex space-x-1">
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star_half</span>
+                  </div>
+                  <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                    <span class="text-[#b37a1a] font-semibold text-sm">Lock Repair</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="swiper-slide flex">
+              <div class="review-card bg-transparent p-8 rounded-3xl shadow-xl border-[3px] border-[#FFAA33] hover:bg-white hover:border-[#F4BB44] w-full backdrop-blur-sm flex flex-col justify-between h-[420px]">
+                <div>
+                  <div class="flex items-center mb-6">
+                    <div class="avatar w-14 h-14 rounded-full text-black flex items-center justify-center mr-4 font-bold text-lg shadow-lg">RB</div>
+                    <div class="text-left">
+                      <p class="text-lg font-bold text-gray-800">Robert Brown</p>
+                      <p class="text-sm text-gray-500 flex items-center mt-1">
+                        <span class="material-icons text-sm mr-2 text-yellow-500">location_on</span>
+                        Bayonne, NJ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mb-6 relative">
+                    <div class="absolute -top-2 -left-2 w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full flex items-center justify-center">
+                      <span class="material-icons text-2xl quote-icon">format_quote</span>
+                    </div>
+                    <div class="bg-white/60 p-6 rounded-2xl border border-yellow-100 ml-4">
+                      <p class="text-gray-700 leading-relaxed text-left text-base font-medium italic">
+                        I had them install a safe in my home. The technician was discreet, professional, and made sure everything was secure.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center mt-auto">
+                  <div class="flex space-x-1">
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                    <span class="material-icons text-yellow-400 text-lg">star</span>
+                  </div>
+                  <div class="service-tag bg-gradient-to-r from-[#d4b25a]/30 to-[#b37a1a]/30 px-4 py-2 rounded-full">
+                    <span class="text-[#b37a1a] font-semibold text-sm">Safe Installation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <!-- Pagination -->
+          <div class="swiper-pagination !static mt-8 relative"></div>
+        </div>
+
+        <!-- Read More Link -->
+        <div class="flex justify-center mt-12">
+          <a
+            href="reviews.html"
+            class="call-button flex items-center justify-center space-x-2 
+                          bg-gradient-to-r from-[#FFAA33] to-[#FFAA33] 
+                          hover:from-[#F4C430] hover:to-[#F4C430] hover:text-black
+                          transition-all duration-300 rounded-xl px-6 py-3 
+                          font-bold text-[#f9f9ef] text-base shadow-lg"
+          >
+            <span class="material-icons text-xl">menu_book</span>
+            <span>Read All Our Reviews</span>
+          </a>
+        </div>
+      </div>
     </section>
+
 
       <section class="bg-[#ECF7FF] text-white py-16 px-6 text-center">
           <!-- Headline -->
@@ -1464,7 +1645,6 @@
         });
     </script>
 
-
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -1477,6 +1657,30 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Swiper JS -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        breakpoints: {
+        1024: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        },
+    });
+    </script>
 
 
 </body>
